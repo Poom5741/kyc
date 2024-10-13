@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "kyc_backend": {
+      "candid": "src/kyc_backend/kyc_backend.did",
+      "package": "kyc_backend",
+      "type": "rust"
+    },
+    "kyc_frontend": {
+      "dependencies": [
+        "kyc_backend"
+      ],
+      "source": [
+        "src/kyc_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "kyc_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
