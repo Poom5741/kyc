@@ -1,3 +1,10 @@
 service : {
-    "greet": (text) -> (text) query;
+    "submit_kyc": (text, text) -> (bool);
+    "get_kyc_status": (text) -> (opt record {
+        user_id: text;
+        document: text;
+        status: text;
+    }) query;
+    "approve_kyc": (text) -> (bool);
+    "reject_kyc": (text) -> (bool);
 }
